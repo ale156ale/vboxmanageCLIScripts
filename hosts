@@ -1,0 +1,18 @@
+# reference link:https://www.cyberciti.biz/faq/ansible-apt-update-all-packages-on-ubuntu-debian-linux/
+# set up ssh user name and path to python3
+[all:vars]
+ansible_user='managedebian'
+ansible_become=yes
+ansible_become_method=sudo
+ansible_python_interpreter='/usr/bin/env python3'
+
+#
+# our server names
+# may be mapped using /etc/hosts or ~/.ssh/config
+# you can use ip address here too
+#
+[servers]
+192.168.10.129
+192.168.10.137
+192.168.10.138
+192.168.10.173
